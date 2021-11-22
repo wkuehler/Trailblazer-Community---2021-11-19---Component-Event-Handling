@@ -1,0 +1,23 @@
+<aura:component
+  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"
+  access="global"
+>
+  <aura:attribute name="textmessage" type="String" />
+
+  <aura:registerEvent name="EventTesting" type="c:EventTesting" />
+
+  <aura:handler
+    name="EventTesting"
+    event="c:EventTesting"
+    action="{!c.handleComponentEvent}"
+    phase="bubble"
+    includeFacets="true"
+  />
+
+  <lightning:button
+    variant="success"
+    label="Event Handle"
+    onclick="{!c.fireComponentEvent}"
+  />
+  <br /> {!v.textmessage} {!v.body}</aura:component
+>

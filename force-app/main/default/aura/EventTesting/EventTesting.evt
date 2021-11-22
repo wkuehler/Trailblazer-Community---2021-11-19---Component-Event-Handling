@@ -1,0 +1,4 @@
+<!--c:compEvent-->
+<aura:event type="COMPONENT">
+  <aura:attribute name="messagetodisplay" type="String"
+/></aura:event>
